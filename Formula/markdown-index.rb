@@ -7,7 +7,6 @@ class MarkdownIndex < Formula
   homepage "https://github.com/mmiranda/markdown-index"
   version "0.1.1-alpha"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
