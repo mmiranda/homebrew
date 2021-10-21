@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install mmiranda/homebrew/<formula>`
+`brew install mmiranda/mdindex/<formula>`
 
-Or `brew tap mmiranda/homebrew` and then `brew install <formula>`.
+Or `brew tap mmiranda/mdindex` and then `brew install <formula>`.
 
 ## Documentation
 
