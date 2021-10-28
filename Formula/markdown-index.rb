@@ -9,17 +9,17 @@ class MarkdownIndex < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2-beta/markdown-index_0.1.2-beta_Darwin_x86_64.tar.gz"
-      sha256 "6590a061ab809233e9967b9938c13b5df99295012fa638bd43af9d411639f3ff"
+    if Hardware::CPU.arm?
+      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2-beta/markdown-index_0.1.2-beta_Darwin_arm64.tar.gz"
+      sha256 "1b0d85137c060127872dc44ba7db7d8be9733cfa03284245b0c7d91f7e1cb431"
 
       def install
         bin.install "markdown-index"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2-beta/markdown-index_0.1.2-beta_Darwin_arm64.tar.gz"
-      sha256 "26cdcb461dc81fc861075ec71ec4a1082086e1ec7a4977da43f1e2c4f6765ba6"
+    if Hardware::CPU.intel?
+      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2-beta/markdown-index_0.1.2-beta_Darwin_x86_64.tar.gz"
+      sha256 "e31ff8589a9f33518565836bedc3d79862105fd050040d667ae39cddb5f67cd9"
 
       def install
         bin.install "markdown-index"
@@ -30,7 +30,7 @@ class MarkdownIndex < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2-beta/markdown-index_0.1.2-beta_Linux_x86_64.tar.gz"
-      sha256 "c97b51af2ffe58e21487ec6209cc52959ffbee925fa348524816db0bc22a1522"
+      sha256 "1cf30213d44112093bd50c8fcce1c1fae94c2be3cfe9915475444e687dcc2865"
 
       def install
         bin.install "markdown-index"
@@ -38,7 +38,7 @@ class MarkdownIndex < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2-beta/markdown-index_0.1.2-beta_Linux_arm64.tar.gz"
-      sha256 "ac39de44cfebcf4fd13d68b03fab3e2500d71acb82f817ec27490308a64e7dc6"
+      sha256 "2fc4f56be2eed2e1a8fc06b111b9ad36697628ce7795f945d5c5216035c7e48b"
 
       def install
         bin.install "markdown-index"
