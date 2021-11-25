@@ -1,10 +1,17 @@
 # Mmiranda Homebrew
 
+If you end up here, probably you want to install one of my libraries! :)
+
+If you don't know them, please check it out:
+
+* (markdown-index)[https://github.com/mmiranda/markdown-index]
+* (cfdtunnel)[https://github.com/mmiranda/cfdtunnel]
+
 ## How do I install these formulae?
 
-`brew install mmiranda/mdindex/<formula>`
+`brew install mmiranda/apps/<formula>`
 
-Or `brew tap mmiranda/mdindex` and then `brew install <formula>`.
+Or `brew tap mmiranda/apps` and then `brew install <formula>`.
 
 ## Documentation
 
