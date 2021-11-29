@@ -9,17 +9,17 @@ class Cfdtunnel < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "0ca2dbc583b9dd92351ae06086f79e798b0a32a09a95c5dd2072ffe774a63c4c"
+    if Hardware::CPU.intel?
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "87e60f1efbb573c3869091e229314c5d3d56c1507750e47916326e7f76231185"
 
       def install
         bin.install "cfdtunnel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "c02217212a7929d15495777a219913767913b2c0b471b57b42e690212c62c8ba"
+    if Hardware::CPU.arm?
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "11ce263637b464a7e8aa975e5b73ebab89bac19cfd258cac2923177ddd4fc2f6"
 
       def install
         bin.install "cfdtunnel"
@@ -30,7 +30,7 @@ class Cfdtunnel < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "b01db90e8749c38c95912d1426dda9d51815d7c1709eed36c0390de79276bc0e"
+      sha256 "0b3d8256e11060d3653a593ac805a0a432500d40c5c5de1adb51bfed794289e6"
 
       def install
         bin.install "cfdtunnel"
@@ -38,7 +38,7 @@ class Cfdtunnel < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Linux_arm64.tar.gz"
-      sha256 "230b1b7e8475b36f2c98bde910eaae59a5e88f57f26a79706ae836eb453f5f53"
+      sha256 "8a1fdc5fa0f5fdbbed22c47df18356ab343e7423fbd843f26431ba00a04de016"
 
       def install
         bin.install "cfdtunnel"
