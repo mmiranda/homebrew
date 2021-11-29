@@ -5,21 +5,21 @@
 class Cfdtunnel < Formula
   desc "Use multiple cloudflared tunnel instances on the fly"
   homepage "https://github.com/mmiranda/cfdtunnel"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.0/cfdtunnel_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "c5f99a27550513a35d4db12c070e5ddf5e4c52f99caf9321eecd4640331b76cc"
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "0ca2dbc583b9dd92351ae06086f79e798b0a32a09a95c5dd2072ffe774a63c4c"
 
       def install
         bin.install "cfdtunnel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.0/cfdtunnel_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "acb7da62a6d1e76cddb222bd5c62273dd41b997d91599d059f90cc22f9364963"
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "c02217212a7929d15495777a219913767913b2c0b471b57b42e690212c62c8ba"
 
       def install
         bin.install "cfdtunnel"
@@ -28,17 +28,17 @@ class Cfdtunnel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.0/cfdtunnel_0.1.0_Linux_arm64.tar.gz"
-      sha256 "7af1338a656fca3d5b4b15d5fb1d895f21aa8c810f4b72cf00cb49029c2211d1"
+    if Hardware::CPU.intel?
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "b01db90e8749c38c95912d1426dda9d51815d7c1709eed36c0390de79276bc0e"
 
       def install
         bin.install "cfdtunnel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.0/cfdtunnel_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "3a5ede78b580d7701d124a3d444ad49daf411404441d94e4bc2ceba67f1095a6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.1/cfdtunnel_0.1.1_Linux_arm64.tar.gz"
+      sha256 "230b1b7e8475b36f2c98bde910eaae59a5e88f57f26a79706ae836eb453f5f53"
 
       def install
         bin.install "cfdtunnel"
@@ -47,6 +47,6 @@ class Cfdtunnel < Formula
   end
 
   test do
-    system "#{bin}/program", "--version"
+    system "#{bin}/program", "version"
   end
 end
