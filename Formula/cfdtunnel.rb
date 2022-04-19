@@ -5,21 +5,21 @@
 class Cfdtunnel < Formula
   desc "Use multiple cloudflared tunnel instances on the fly"
   homepage "https://github.com/mmiranda/cfdtunnel"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.3/cfdtunnel_0.1.3_Darwin_arm64.tar.gz"
-      sha256 "a0fa3e01af8f30f6d4e750e70b8bf30526dfc5be0ec7bff74faeebdd5b2a0500"
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.4/cfdtunnel_0.1.4_Darwin_arm64.tar.gz"
+      sha256 "0689073f575185fd3d4f3a92759865f4c73496d48d7deb778f6c577efeac1e95"
 
       def install
         bin.install "cfdtunnel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.3/cfdtunnel_0.1.3_Darwin_x86_64.tar.gz"
-      sha256 "f4406abf938cbaf8bb7e3f3e36546325283469414b20586aa435ebf6eed97f51"
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.4/cfdtunnel_0.1.4_Darwin_x86_64.tar.gz"
+      sha256 "9c37d833ff71295e3ac2d8f3c78690eb6f3ae098e0f4a0beaa68b7cdd252214b"
 
       def install
         bin.install "cfdtunnel"
@@ -29,16 +29,16 @@ class Cfdtunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.3/cfdtunnel_0.1.3_Linux_x86_64.tar.gz"
-      sha256 "486b69c5eb4826be1d83e50e5b7097c5f22893af7bfbcc127f155b10c42baf96"
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.4/cfdtunnel_0.1.4_Linux_x86_64.tar.gz"
+      sha256 "de5fd8d9fd62efb2d0f514ee3d62d40d6b3f987be63e4f5fc64e9549a4f989ec"
 
       def install
         bin.install "cfdtunnel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.3/cfdtunnel_0.1.3_Linux_arm64.tar.gz"
-      sha256 "d1783bd266a91dfe47f7d19875c27ad264f1b51bd5f7bd4f977f66c95f56af10"
+      url "https://github.com/mmiranda/cfdtunnel/releases/download/v0.1.4/cfdtunnel_0.1.4_Linux_arm64.tar.gz"
+      sha256 "742e08e3979c7d0f95b02a0835c10334d62fe2f4cd99e1b9654c3d1949e00649"
 
       def install
         bin.install "cfdtunnel"
