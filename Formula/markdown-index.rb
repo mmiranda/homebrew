@@ -5,21 +5,21 @@
 class MarkdownIndex < Formula
   desc "Tool to generate a global Markdown Summary Index based on other markdown files"
   homepage "https://github.com/mmiranda/markdown-index"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.1/markdown-index_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "2b878934337bc0bc61fb4f8422479dbf1dcaaff6d7f4ef624194f0eed6ea9733"
+      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2/markdown-index_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "9ed7b666b53b1b7ef345a0c313e3ff02233a1464074c30c2c42172a75f0f4a7a"
 
       def install
         bin.install "markdown-index"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.1/markdown-index_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "0547ab3f71b06bee78b470f4d3b8f2cd67295a7711b9fb71a30ba5cda3261563"
+      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2/markdown-index_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "2d8ed8a386abe5b10afa10bbe9498188f84a0b8d4ba998e533b9d869acab2131"
 
       def install
         bin.install "markdown-index"
@@ -29,16 +29,16 @@ class MarkdownIndex < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.1/markdown-index_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "a419b873bf6056eb9f50407fdb0a5e3f7a8c8a7e23ac8030eaa372b186eeec58"
+      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2/markdown-index_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "e5c18e13f65db2fc97dafc2bccd13e4485a57221cf072d929ef58279c5e082d2"
 
       def install
         bin.install "markdown-index"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.1/markdown-index_0.1.1_Linux_arm64.tar.gz"
-      sha256 "f378dc3b938e90947d2cd76c89293d7b427f9efd8bb4fa94cd1bddcbb9880133"
+      url "https://github.com/mmiranda/markdown-index/releases/download/v0.1.2/markdown-index_0.1.2_Linux_arm64.tar.gz"
+      sha256 "01a42ca99a7725d078d34f4181b4ff0fa90fc2e26c28dc9905713d06110a0108"
 
       def install
         bin.install "markdown-index"
